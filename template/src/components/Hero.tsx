@@ -1,8 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-import AppStoreButton from './AppStoreButton';
-import PlayStoreButton from './PlayStoreButton';
+
 
 import { heroDetails } from '@/data/hero';
 
@@ -21,22 +20,20 @@ const Hero: React.FC = () => {
             </div>
 
             <div className="text-center">
-                <h1 className="text-4xl md:text-6xl md:leading-tight font-bold text-foreground max-w-lg md:max-w-2xl mx-auto">{heroDetails.heading}</h1>
-                <p className="mt-4 text-foreground max-w-lg mx-auto">{heroDetails.subheading}</p>
-                <div className="mt-6 flex flex-col sm:flex-row items-center sm:gap-4 w-fit mx-auto">
-                    <AppStoreButton dark />
-                    <PlayStoreButton dark />
+                <h1 className="text-4xl md:text-6xl md:leading-tight font-bold max-w-lg md:max-w-2xl mx-auto text-transparent bg-clip-text bg-[linear-gradient(to_bottom,oklch(0.828_0.189_84.429)_0%,oklch(0.555_0.163_48.998)_100%)]">{heroDetails.heading}</h1>
+                <p className="mt-4 max-w-lg mx-auto text-[oklch(0.707 0.022 261.325)]">{heroDetails.subheading}</p>
+                <div className="mt-6 flex flex-col sm:flex-row items-center sm:gap-4 w-fit mx-auto">          
                 </div>
                 <Image
                     src={heroDetails.centerImageSrc}
-                    width={384}
-                    height={340}
+                    width={600}
+                    height={400}
                     quality={100}
                     sizes="(max-width: 768px) 100vw, 384px"
                     priority={true}
                     unoptimized={true}
                     alt="app mockup"
-                    className='relative mt-12 md:mt-16 mx-auto z-10'
+                    className='relative mt-12 md:mt-16 mx-auto z-10 border-4 border-gray-300 p-4 rounded-lg'
                 />
             </div>
         </section>
